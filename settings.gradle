@@ -1,0 +1,3 @@
+include ':sipservice'
+include ':app'
+rootProject.name = "SipApp"
