@@ -3,6 +3,7 @@ package com.example.sipapp;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
@@ -211,12 +212,15 @@ public class CallActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
     @Override
     public void surfaceCreated(SurfaceHolder surfaceHolder) {
+        /*SipServiceCommand.startVideoPreview(CallActivity.this, mAccountID, mCallID, mSvLocal.getHolder().getSurface());*/
         SipServiceCommand.startVideoPreview(CallActivity.this, mAccountID, mCallID, mSvLocal.getHolder().getSurface());
+
 
     }
 
     @Override
     public void surfaceChanged(SurfaceHolder surfaceHolder, int i, int i1, int i2) {
+        SipServiceCommand.changeVideoOrientation(CallActivity.this,mAccountID, mCallID,0);
     }
 
     @Override

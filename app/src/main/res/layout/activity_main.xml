@@ -110,8 +110,7 @@
             <EditText
                 android:id="@+id/etCallNumer"
                 android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="1004" />
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
         <LinearLayout
